@@ -21,6 +21,8 @@ export interface PhotoStory {
   location?: string;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const PERSONAL_INFO = {
   name: "Emanuel Okoth",
   handle: "@14Emanuel",
@@ -159,7 +161,7 @@ export const PROJECTS: Project[] = [
 export const PHOTO_STORIES: PhotoStory[] = [
   {
     id: "lake-victoria",
-    src: "/images/lake-victoria-emanuel.jpeg",
+    src: `${basePath}/images/lake-victoria-emanuel.jpeg`,
     alt: "Emanuel Okoth at Lake Victoria waters at sunset",
     title: "Serenity by Lake Victoria",
     caption: "Standing in the waters of Kisumu. The stillness of the lake and the calm ecosystem of water lilies inspire how I architect software: decentralized, patient, yet capable of extraordinary depth.",
@@ -168,7 +170,7 @@ export const PHOTO_STORIES: PhotoStory[] = [
   },
   {
     id: "pitching-africas-talking",
-    src: "/images/pitch-africas-talking.jpeg",
+    src: `${basePath}/images/pitch-africas-talking.jpeg`,
     alt: "Emanuel presenting Yaya Construction Labor at Africa's Talking Hackathon",
     title: "Pitching Construction Labor Tech",
     caption: "Presenting 'Yaya! Construction Labor Matching' at Africa's Talking Hackathon—demonstrating real-time SMS & USSD job matching for informal construction artisans.",
@@ -177,7 +179,7 @@ export const PHOTO_STORIES: PhotoStory[] = [
   },
   {
     id: "hackathon-presentation",
-    src: "/images/hackathon-presentation.jpeg",
+    src: `${basePath}/images/hackathon-presentation.jpeg`,
     alt: "Emanuel addressing a packed tech hall of developers and judges",
     title: "Commanding the Technical Floor",
     caption: "Taking the stage to break down system architecture, token limits, and offline resiliency before fellow developers, engineers, and judges.",
@@ -186,7 +188,7 @@ export const PHOTO_STORIES: PhotoStory[] = [
   },
   {
     id: "collaborative-engineering",
-    src: "/images/collaborative-engineering.jpeg",
+    src: `${basePath}/images/collaborative-engineering.jpeg`,
     alt: "Emanuel deeply engaged in pair programming at a laptop with teammates",
     title: "Crucible of Collaboration",
     caption: "Hacking side-by-side with teammates. True engineering happens in the trenches—debugging race conditions, optimizing latency, and shipping under pressure.",
@@ -195,7 +197,7 @@ export const PHOTO_STORIES: PhotoStory[] = [
   },
   {
     id: "zone01-kisumu-cohort",
-    src: "/images/zone01-kisumu-cohort.jpeg",
+    src: `${basePath}/images/zone01-kisumu-cohort.jpeg`,
     alt: "Zone01 Kisumu Cohort group photo - Build the Future",
     title: "Zone01 Kisumu: Building the Future",
     caption: "Alongside brilliant peers and innovators in the KijaniSpace / Zone01 Kisumu ecosystem. Rooted in peer learning, low-level mastery, and climate-smart innovation.",
@@ -204,7 +206,7 @@ export const PHOTO_STORIES: PhotoStory[] = [
   },
   {
     id: "celebration-bold",
-    src: "/images/celebration-bold.jpeg",
+    src: `${basePath}/images/celebration-bold.jpeg`,
     alt: "50 Years Bold celebration moment",
     title: "50 Years Bold & Resilient",
     caption: "Marking milestones with high energy. Every breakthrough in code is an exercise in grit, audacious goals, and bold execution.",
