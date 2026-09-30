@@ -6,6 +6,8 @@ import { ArrowRight, Bot, Cpu, Sparkles, Terminal, Globe } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
 
 export default function HeroSection() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Ambient background glow orbs for light sunlit pond */}
@@ -103,7 +105,7 @@ export default function HeroSection() {
               {/* Photo Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
                 <Image
-                  src="/images/lake-victoria-emanuel.jpeg"
+                  src={`${basePath}/images/lake-victoria-emanuel.jpeg`}
                   alt="Emanuel Okoth at Lake Victoria"
                   fill
                   priority
