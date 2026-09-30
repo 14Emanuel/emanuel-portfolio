@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-pond-white: #ffffff;
+  --color-pond-surface: #f8fafc;
+  --color-pond-spring: #f0fdfa;
+  --color-lotus-pink: #f43f5e;
+  --color-mint: #059669;
+  --color-teal: #0d9488;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* White Pond Glassmorphism */
+.pond-glass-white {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(13, 148, 136, 0.16);
+}
+
+.pond-glass-hover-white {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pond-glass-hover-white:hover {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(13, 148, 136, 0.38);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -12px rgba(13, 148, 136, 0.15);
+}
+
+.lotus-glow-white {
+  box-shadow: 0 4px 20px -4px rgba(244, 63, 94, 0.15);
+}
+
+/* Gentle water ripples */
+@keyframes waterRipples {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+.animate-water-breathing {
+  animation: waterRipples 8s ease-in-out infinite;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(13, 148, 136, 0.2);
+  color: #0f766e;
+}
